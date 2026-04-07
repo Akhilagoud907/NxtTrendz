@@ -37,6 +37,8 @@ Password: rahul@2021
 - ➕ Increment / ➖ Decrement Cart Items  
 - 📦 Detailed Product View Page  
 - 🔄 Persistent Cart using Context API  
+- 📱 Fully Responsive Design 
+- 💳 Payment Popup with Order Confirmation
 - 📱 Fully Responsive Design  
 
 ---
@@ -62,6 +64,7 @@ Password: rahul@2021
 - Protected routing based on authentication state  
 - Clean separation of UI and business logic  
 - Dynamic product rendering from API  
+- Popup-based interaction for checkout flow 
 
 ---
 
@@ -80,7 +83,9 @@ Password: rahul@2021
 - Update quantity dynamically  
 - Remove items from cart  
 - Maintain global cart state using Context API  
-- Display total items and summary  
+- Display total items and summary 
+- Checkout opens a **Payment Popup Modal**
+-  Validate payment selection before confirming order  
 
 ---
 

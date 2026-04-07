@@ -1,1 +1,112 @@
 /* Write your CSS here */
+/* Cart Summary Container */
+.cart-summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.order-total {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.items-count {
+  font-size: 16px;
+  color: #616e7c;
+  margin-bottom: 15px;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  background-color: #0b69ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkout-btn:hover {
+  background-color: #0954cc;
+}
+
+/* Popup Container */
+.popup-content {
+  border-radius: 12px !important;
+  padding: 25px !important;
+  width: 350px;
+}
+
+/* Payment Heading */
+.payment-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Payment Options */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* Summary Box */
+.summary-box {
+  background-color: #f1f5f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.summary-text {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+/* Buttons */
+.confirm-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #16a34a;
+  color: white;
+  cursor: pointer;
+}
+
+.confirm-btn:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.close-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+/* Success Message */
+.success-text {
+  text-align: center;
+  color: #16a34a;
+  font-size: 18px;
+  font-weight: 600;
+}

@@ -60,10 +60,11 @@ class App extends Component {
           ),
         }
       }
-      return {cartList: [...prevState.cartList, product]}
+      return {cartList: [...prevState.cartList, {...product, quantity: 1}]}
     })
   }
 
+  // {cartList: [...prevState.cartList, product]}
   render() {
     const {cartList} = this.state
 
