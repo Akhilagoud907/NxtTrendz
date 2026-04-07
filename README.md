@@ -1,183 +1,191 @@
-In this project, let's build a **Nxt Trendz - Cart Features** by applying the concepts we have learned till now.
+# 🛍️ Nxt Trendz - E-commerce Web Application
 
-### Refer to the video below:
+![React](https://img.shields.io/badge/Frontend-React-blue?logo=react)
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)
+![Routing](https://img.shields.io/badge/Routing-React_Router-green)
+![State](https://img.shields.io/badge/State-Context_API-purple)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
-<br/>
-<div style="text-align: center;">
-  <video style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-output.mp4" type="video/mp4">
-  </video>
-</div>
-<br/>
+A production-ready **E-commerce Web Application** built using **React.js**, enabling users to browse products, search, filter, sort, and manage their cart with a seamless user experience.
 
-### Design Files
+This project demonstrates strong understanding of:
 
-<details>
-<summary>Click to view</summary>
+- Component-Based Architecture  
+- State Management using Context API  
+- Routing & Navigation  
+- API Integration  
+- Authentication Handling  
+- Responsive UI Design  
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-sm-output-v0.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-lg-output.png)
+---
 
-</details>
+## 🔐 Login Credentials
 
-### Set Up Instructions
+Username: rahul  
+Password: rahul@2021  
 
-<details>
-<summary>Click to view</summary>
+---
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+## ✨ Core Features
 
-### Completion Instructions
+- 🔐 User Authentication (Login & Logout)  
+- 🛡 Protected Routes using React Router  
+- 🔍 Product Search Functionality  
+- 🎯 Filter Products (Category, Rating, Price)  
+- ↕️ Sort Products (Price Low → High / High → Low)  
+- 🛒 Add to Cart Functionality  
+- ➕ Increment / ➖ Decrement Cart Items  
+- 📦 Detailed Product View Page  
+- 🔄 Persistent Cart using Context API  
+- 📱 Fully Responsive Design  
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+---
 
-The app must have the following functionalities
+## 🛠 Tech Stack
 
-- When an unauthenticated user tries to access the **Cart** Route, then the page should be navigated to **Login** Route
+| Category | Technology |
+|----------|------------|
+| Frontend | React.js |
+| Language | JavaScript (ES6+) |
+| Routing | React Router DOM |
+| State Management | Context API |
+| Styling | CSS3 |
+| API | REST API Integration |
 
-- Following are the features to be implemented
+---
 
-  - Feature 1
+## 🏗 Application Architecture
 
-    - When an authenticated user tries to add the same product multiple times
-      - The quantity of the product should be updated accordingly, and the count of the cart items in the header should be remained same
+- Modular and reusable component structure  
+- Centralized state management using Context API  
+- Conditional rendering based on API response  
+- Protected routing based on authentication state  
+- Clean separation of UI and business logic  
+- Dynamic product rendering from API  
 
-  - Feature 2
+---
 
-    - The total amount and number of items in the cart should be displayed in the **Cart** Route
+## 🔐 Authentication Flow
 
-  - Feature 3
+1. User logs in with credentials  
+2. Token is stored in cookies/local storage  
+3. Protected routes validate authentication  
+4. Unauthorized users are redirected to Login page  
 
-    - In each cart item in the cart
-      - When the plus icon is clicked, then the quantity of the product should be incremented by one
-      - When the minus icon is clicked, then the quantity of the product should be decremented by one
-      - When the quantity of the product is one and the minus icon is clicked, then the respective product should be removed from the cart
-      - Based on the quantity of the product, the product price and the Cart Summary, i.e the total cost should be updated accordingly
+---
 
-  - Feature 4
+## 🛒 Cart Management Logic
 
-    - When an authenticated user clicks on the remove button, cart item should be removed from the cart list
+- Add products to cart  
+- Update quantity dynamically  
+- Remove items from cart  
+- Maintain global cart state using Context API  
+- Display total items and summary  
 
-  - Feature 5
+---
 
-    - When an authenticated user clicks on the **Remove All** button, all the cart items should be removed from the cart and [Empty Cart View](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-empty-cart-view.png) should be displayed
+## 📂 Project Structure
 
-- The `CartContext` has an object as a value with the following properties
-  - `cartList` - this key stores the cart items
-  - `removeAllCartItems` - this method is used to remove all the cart items in the `cartList`
-  - `addCartItem` - this method adds the cart item to the `cartList`
-  - `removeCartItem` - this method removes the cart item from the `cartList`
-  - `incrementCartItemQuantity` - this method increases the quantity of a product in the `cartList`
-  - `decrementCartItemQuantity` - this method decreases the quantity of a product in the `cartList`
+```
+NxtTrendz/
+│
+├── public/
+│ ├── index.html
+│
+├── src/
+│ │
+│ ├── components/
+│ │ ├── AllProductSection/
+│ │ ├── Cart/
+│ │ ├── CartItem/
+│ │ ├── CartListView/
+│ │ ├── CartSummary/
+│ │ ├── EmptyCartView/
+│ │ ├── FiltersGroup/
+│ │ ├── Header/
+│ │ ├── Home/
+| | ├── LoginForm/
+| | ├── NotFound/
+| | ├── PrimeDealSection/
+| | ├── ProductDealsSection/
+| | ├── ProductCard/
+| | ├── ProductItemDetails/
+| | ├── Products/
+| | ├── ProductsHeadr/
+| | ├── ProtectedRoute/
+│ │ └── SimilarProductItem/
+│ ├── context/
+│ │ └── CartContext.js
+│ │
+│ ├── App.js
+│ ├── index.js
+│ └── setupTests.js
+│
+├── package.json
+└── README.md
+```
 
-</details>
+---
 
-<details>
-<summary>Components Structure</summary>
+## ⚙️ Installation & Setup
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-component-structure-breakdown.png" alt="component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+```bash
+git clone https://github.com/Akhilagoud907/NxtTrendz
+cd NxtTrendz
+npm install
+npm start
+```
 
-</details>
+Application runs at:
 
-<details>
-<summary>Implementation Files</summary>
-<br/>
+```
+http://localhost:3000
+```
 
-Use these files to complete the implementation:
+---
 
-- `src/App.js`
-- `src/components/Cart/index.js`
-- `src/components/Cart/index.css`
-- `src/components/CartItem/index.js`
-- `src/components/CartItem/index.css`
-- `src/components/CartSummary/index.js`
-- `src/components/CartSummary/index.css`
-</details>
+## 🔌 APIs Used
 
-### Quick Tips
+- Authentication API 
+- Products API 
 
-<details>
-<summary>Click to view</summary>
-<br>
+---
 
-- The `line-height` CSS property sets the height of a line box. It's commonly used to set the distance between lines of text
+## 📱 Responsive Design
 
-  ```
-  line-height: 1.5;
-  ```
+- Mobile-Friendly Layout  
+- Tablet Optimization  
+- Desktop Responsive Grid  
+- Smooth Hover Effects  
+- Gradient Background UI  
 
-    <br/>
-    <img src="https://assets.ccbp.in/frontend/react-js/line-height-img.png" alt="line height" style="width:90%; max-width: 600px;"/>
+---
 
-- The array method `find()` returns the first item's value that satisfies the provided testing function. If no item is found, it returns `undefined`
+## 📈 Performance Highlights
 
-  **Syntax**: `arr.find(Testing Function)`
+- Efficient state management  
+- Clean routing structure  
+- Reusable components  
+- Optimized rendering logic  
+- Clear separation of concerns  
 
-</details>
+---
 
-### Important Note
+## 🚀 Future Enhancements
 
-<details>
-<summary>Click to view</summary>
+- ❤️ Wishlist Feature
+- 💳 Payment Gateway Integration
+- 📦 Order History
+- 🌙 Dark Mode
+- 📊 Analytics Dashboard 
+---
 
-<br/>
+## 👩‍💻 Author
 
-**The following instructions are required for the tests to pass**
+**Akhila**
 
-- `BsPlusSquare`, `BsDashSquare` icons from `react-icons` should be used for **plus** and **minus** buttons in cart item
-- The Cart Item should consist of two HTML button elements with data-testid attribute values as **plus** and **minus** respectively
-- `AiFillCloseCircle` icon from react-icons should be used for **remove** button in cartItem
-- The Cart Item should consist of an HTML button element with data-testid attribute values as **remove**
-- The product image in **Cart Item** Route should have the alt as `title` of the product
+---
 
-- Prime User credentials
+## ⭐ Show Your Support
 
-  ```text
-   username: rahul
-   password: rahul@2021
-  ```
-
-- Non-Prime User credentials
-
-  ```text
-   username: raja
-   password: raja@2021
-  ```
-
-</details>
-
-### Resources
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #0b69ff; width: 150px; padding: 10px; color: white">Hex: #0b69ff</div>
-<div style="background-color: #171f46; width: 150px; padding: 10px; color: white">Hex: #171f46</div>
-<div style="background-color: #616e7c; width: 150px; padding: 10px; color: white">Hex: #616e7c</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+If you found this project helpful or impressive, please consider giving it a ⭐ on GitHub!
